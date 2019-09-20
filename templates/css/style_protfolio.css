@@ -1,0 +1,138 @@
+#root{
+    
+    width: 100%;
+    margin-top:10%;
+    
+}
+#grid-institute{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr .5fr 2fr;
+    width: 30%;
+    position: relative;
+    left: 40%;
+    grid-row-gap: 70%;
+
+}
+.institute{
+    height: 100%;
+    color: white;
+    font-size: 1.2em;
+}
+.institute1{
+    grid-area: 1 / 1 / span 1 / span 1;
+    
+}
+
+.institute2{
+    grid-area: 2 / 3 / span 2 / span 3;
+    
+}
+
+.institute3{
+    grid-area: 3 / 1 / span 3 / span 1;
+  
+}
+
+.vertical{
+    grid-area: 1 / 2 /  4/  2;
+    background-color:white; 
+    width: 2%;
+}
+
+/* tooltip  Creation*/
+
+.tooltiptext{
+    display: none;
+    
+}
+
+.tooltiptext{
+    position: absolute;
+    width: 30vw;
+    height: 40vh;
+    top:30%;
+    right: 13.5vw;
+    z-index: 1;
+}
+
+/* tooltip show  */
+
+.institute1:hover .tooltiptext{
+    display: block;
+    cursor: context-menu;
+}
+
+.institute2:hover .tooltiptext{
+    display: block;
+    cursor: context-menu;
+    left: 10vw;
+    top: 0;
+    bottom: 25%;
+    
+}
+
+.institute3:hover .tooltiptext{
+    display: block;
+    cursor: context-menu;
+}
+
+
+/* Aimation To slide up */
+
+.slide-top {
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+  @keyframes slide-top {
+    0% {
+      
+              transform: translateY(100px);
+    }
+    100% {
+      
+              transform: translateY(0px);
+    }
+  }
+  
+
+/*  --- Responsive for mobile */
+  @media (max-width:767px){
+    header{height: auto;z-index: 0;padding-top:55px;}
+    .nav-bar{width: 100%;display: none;}
+    .nav-bar ul{
+        display: block;
+        padding-left:10px; 
+        padding-right:10px; 
+    }
+    .nav-bar li{
+        margin:0px;
+        margin-bottom: 5px;
+        
+    }
+    .nav-bar li a{width: 100%;}
+    .nav-bar li a:hover{
+    transform: scale(1.015);
+    }
+    .icon{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        height: 50px;
+        width: 50px;
+        
+    }
+    .responsive{
+        display: block;
+        z-index: 999;
+    }
+    
+    .container{margin-right: 0px;display: block;}
+    p.one{font-size: 2em;margin-top: 100%;}
+    .second{display: grid;grid-template-rows:2.8fr 1fr;}
+    footer{grid-row:2;}
+    
+}

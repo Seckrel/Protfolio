@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head><title>Contact Me</title>
+        <meta 
+            name="viewport"
+            content="width=device-width;initial-scale=1.0;user-scalable=no;maximum-scale=1.0;minimum-scale=1.0"
+        >
+        <link rel="stylesheet" href="{% static '/css/style_main.css'%}"/>
+        <link rel="stylesheet" href="{% static '/css/style_contact.css'%}"/>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-bar" id="nav">
+                <ul class="nav-list">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+
+                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img class="icon" src="{% static '/svg/bars-solid.svg'%}" onclick="myFunction()"/><br/>
+        <fieldset id="contact">
+            <legend><h1>Contact</h1>Have you any question or want to work together?</legend>
+            <form  action="mailto:aayam.oza@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="Sender_name" placeholder="Name" required/><br/><br/>
+                <input type="email" name="email" placeholder="Email" required/><br/><br/>
+                <textarea  name="detail" placeholder="Jist of topic"></textarea><br/><br/>
+                <input class="button" type="submit" name="submit" value="Submit">
+            </form>
+        </fieldset> 
+            
+        <script>
+            function myFunction() {
+            var x = document.getElementById("nav");
+            var blur = document.getElementById("contact")
+            
+            if (x.className === "nav-bar") {
+                blur.className += " blur-everything"
+                x.className += " responsive";
+            } else {
+                blur.className="";
+                x.className = "nav-bar";
+            }
+            } 
+        
+        </script>
+        
+        
+    </body>
+</html> 

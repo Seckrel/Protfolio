@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head><title></title>
+        <meta 
+            name="viewport"
+            content="width=device-width;initial-scale=1.0;user-scalable=no;maximum-scale=1.0;minimum-scale=1.0"
+        >
+        <link rel="stylesheet" href="{% static '/css/style_main.css'%}">
+        <link rel="stylesheet" href="{% static '/css/style_gallery.css'%}"/>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-bar" id="nav">
+                <ul class="nav-list">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img class="icon" src="{% static '/svg/bars-solid.svg'%}" onclick="myFunction()"/><br/>
+        <section id="root">
+            <div id="container">
+                <span onclick="djSite()" class="django"></span>
+                <span onclick="wpSite()" class="wordpress"></span>
+                <span onclick="androidSite()" class="android"></span>
+                <span onclick="youtubeSite()" class="youtube"></span>
+            </div>
+        </section>
+        <script>
+            function wpSite(){
+                window.location.href = "http://192.168.64.3/wordpress/index.php/life-from-astronomical-death/";
+            }
+
+            function djSite(){
+                window.location.href = "https://github.com/Seckrel/word_project";
+            }
+
+            function androidSite(){
+                window.location.href = "https://www.udacity.com/course/uikit-fundamentals--ud788";
+            }
+            
+            function youtubeSite(){
+                window.location.href = "https://www.youtube.com/channel/UCK-bRc-b9bAUVGaiSgh1p3Q?view_as=subscriber";
+            }
+
+            function myFunction() {
+            var x = document.getElementById("nav");
+            
+            if (x.className === "nav-bar") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-bar";
+            }
+            } 
+
+
+        </script>
+    </body>
+</html>

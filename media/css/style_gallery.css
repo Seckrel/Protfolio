@@ -1,0 +1,96 @@
+#root{
+    width: 50vw;
+    height: 70vh;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    border-radius: 65px;
+    
+    
+    
+}
+li{
+    font-size: 1em;
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 4%;
+    grid-column-gap: 4%;
+    height: 100%;
+    
+}
+span{
+    border-radius: 65px;
+    
+}
+.django{
+    grid-area: 1 / 1 / span 1 /span 1;
+    background-image: url("../media/python--django.png");
+    background-size: cover;
+    background-position: center;
+    width: fit-content;
+    
+    /* background-color: rgba(0, 0, 0,1); */
+    
+    
+}
+
+.wordpress{
+    grid-area: 1 / 2 / span 1 /span 2;
+    background-image: url("../media/WordPress-logotype-wmark.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.android{
+    grid-area: 2 / 1 / span 2 /span 1;
+    background-image: url("../media/android-png-android-logo-png-1024.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.youtube{
+    grid-area: 2 / 2 / span 2 /span 2;
+    background-image: url("../media/youtube-logo-transparent.png");
+    background-size: cover;
+    background-position: center;
+}
+
+img{
+    width: 20rem;
+    height: 18rem;
+    
+}
+
+/* on-hover */
+
+.django:hover{
+    background-image: url("../media/django-project.png");
+    transform: scale(1.12);
+    
+}
+
+.wordpress:hover{
+    background-image: url("../media/word-press.png");
+    transform: scale(1.12);
+}
+
+.android:hover{
+    background-image: url("../media/android-project.png");
+    transform: scale(1.12);
+}
+
+.youtube:hover{
+    background-image: url("../media/youtube-project.png");
+    transform: scale(1.12);
+}
+
+
+@media (max-width:767px){
+    #root{z-index: -9;height: 50vh;}
+    #container{grid-row-gap: 7%;grid-column-gap: 7%;}
+}

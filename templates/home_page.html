@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head><title>Protfolio Of Aayam Ojha</title>
+        <meta 
+            name="viewport"
+            content="width=device-width;initial-scale=1.0;user-scalable=no;maximum-scale=1.0;minimum-scale=1.0"
+        >
+
+
+        <link rel="stylesheet" href="fw/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="{% static '/css/style_homepage.css'%}"/>
+    
+
+    
+    
+    </head>
+    <body>
+        <header>
+            <nav class="nav-bar" id="nav">
+                <ul class="nav-list">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'gallery'%}">Gallery</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            
+        </header>
+        <img class="icon" src="{% static '/svg/bars-solid.svg'%}" onclick="myFunction()"/>
+        <div id="root">
+            <!-- Header Part | navigation -->
+            
+            <div class="first container">
+                 <!-- bio part  -->
+                <div id="bio">
+                    <p class="one bio-info">
+                        I<span style="color: green">'</span>m<br/>Aayam Ojha<br/>Web App Developer
+                    </p>
+                    
+                    
+                </div>
+            </div>
+            <div class="second container">
+                <p class="two">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                         when an unknown printer took a galley of type and scrambled it to make a type
+                          specimen book. It has survived not only five centuries, but also the leap into
+                           electronic typesetting, remaining essentially unchanged. It was popularised
+                            in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+                            passages, and more recently with desktop publishing software like Aldus
+                             PageMaker including versions of Lorem Ipsum.
+                </p>
+
+                <footer>
+                    <img src="{% static '/media/facebook_logo.png'%}" alt="FaceBook" onclick="FaceBook()"/>
+                    <img src="{% static '/media/instagram_logo.png'%}" alt="Instagram" onclick="Instagram"/>
+                </footer>
+             </div>
+        </div>
+            
+        <script>
+            function myFunction() {
+            var x = document.getElementById("nav");
+            
+            if (x.className === "nav-bar") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-bar";
+            }
+            } 
+            
+            function FaceBook(){
+                window.location.href = "https://www.facebook.com/Seckrel.007";
+            }
+
+            function Instagram(){
+                window.location.href = "https://www.instagram.com/aayam_oza/";
+            }
+        </script>
+    </body>
+</html>

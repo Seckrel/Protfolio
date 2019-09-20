@@ -1,0 +1,250 @@
+/* *{
+    margin: 0;
+    bottom: 0;
+    
+} */
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    
+    
+    overflow: hidden;
+    
+
+
+    background-image: linear-gradient(to bottom,rgba(63, 230, 152, 0.52),
+                    rgba(80, 28, 163, 0.671)),
+                    url("../media/To_use.jpg"); 
+    background-size: cover;
+    background-position:top left ;
+    background-attachment: fixed;
+    object-fit: contain;
+    
+    
+}
+
+#root{
+    
+    
+    /* /* min-width: 100%;*/
+    /* min-height: 100%;  */
+    overflow-y: scroll;
+    
+    
+    height: 100vh;
+    margin-top: .2%;
+
+    /* background-image: linear-gradient(to bottom,rgba(63, 230, 152, 0.52),
+                    rgba(80, 28, 163, 0.671)),
+                    url("../media/To_use.jpg"); 
+    background-size: cover;
+    background-position:top left ;
+    background-attachment: fixed;
+    object-fit: contain; */
+
+    
+
+    /* Grid  */
+    display: grid;
+    grid-template-rows: 100vh 100vh;
+    
+}
+
+.colorleft{
+    
+}
+
+.colorright{
+    color:linear-gradient(to right,rgba(63, 230, 152, 0.52));
+}
+
+header{
+    
+    z-index: 999;
+    position: sticky;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: #4079669c;
+    height: 15%;
+
+    
+}
+
+.nav-bar{
+    overflow: hidden;
+}
+
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+li{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%; 
+    /* color: #744E2E; */
+    
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+
+    margin-bottom: 2rem;
+}
+
+.icon{
+    display:none; 
+}
+
+a{
+    text-align: center;
+    padding: 2%;
+    border: 1px solid #744E2E;
+    width: 35%;
+    border-radius: 65px;
+    text-decoration: none;
+    color: #744E2E;
+}
+a:hover{
+    text-decoration: none;
+    color: #744E2E;
+    transform: scale(1.1);
+}
+
+.container{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-right: 7em;
+    display: grid;
+    
+    
+}
+
+.first{
+    /* grid-row-gap: 50px;
+    grid-template-rows: 15% 70% 15%; */
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    overflow-x: hidden;
+    height: 100vh; 
+
+}
+
+
+
+#bio{
+    /* grid-row-start: 2;
+    grid-row-end: 3; */
+    height: 50%;
+    margin-top: 10%; 
+    display: grid;
+    grid-template-columns: 70% 30%;
+    /* overflow: hidden; */
+    
+    
+    
+    
+}
+
+.bio-info{
+    grid-column-start: 2;
+    font-size: 1.2em;
+    /* width: 50em; */
+    height: 100%;
+    
+    
+}
+
+p.one{
+    /* max-height: 50px; */
+    color: #000000;
+    font-size: 3em;
+    margin-top: 50%;
+
+
+    
+}
+
+
+.second{
+    height: 100vh;
+    grid-row-start: 2;
+    
+    
+    
+    /* grid */
+    grid-template-rows: 1.4fr 1.4fr 1fr;
+    grid-template-columns: 70% 30%;
+    
+    
+}
+
+p.two{
+    color: #000000;
+    grid-column: 2;
+    grid-row: 1 / 2;
+    
+}
+
+
+
+footer{
+    grid-row-start: 3;
+    grid-column: 2;
+    /* flex box */
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+
+
+/*  --- Responsive for mobile */
+
+@media (max-width:767px){
+    header{height: auto;z-index: 0;padding-top:55px;}
+    .nav-bar{width: 100%;display: none;}
+    .nav-bar ul{
+        display: block;
+        padding-left:10px; 
+        padding-right:10px; 
+    }
+    .nav-bar li{
+        margin:0px;
+        margin-bottom: 5px;
+        
+    }
+    .nav-bar li a{width: 100%;}
+    .nav-bar li a:hover{
+    transform: scale(1.015);
+    }
+    .icon{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        height: 50px;
+        width: 50px;
+        
+    }
+    .responsive{
+        display: block;
+        z-index: 999;
+    }
+    
+    .container{margin-right: 0px;display: block;}
+    p.one{font-size: 2em;margin-top: 100%;}
+    .second{display: grid;grid-template-rows:2.8fr 1fr;}
+    footer{grid-row:2;}
+    
+}
